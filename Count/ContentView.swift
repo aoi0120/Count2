@@ -39,11 +39,25 @@ struct ContentView: View {
                 .frame(width: 300, height: 100)
                 .font(.system(size: 48))
                 .foregroundColor(judgeCorlor(count: count))
+                // .foregroundStyle(count < 0 ? .blue : (count > 0 ? .red : .black))
             
             HStack {
                 Button(action: {
                     count += 1;
                     judgeResult(count: count)
+                    /*
+                     if count >= 10 {
+                            result = "プラスの勝ち！"
+                        } else if count >= 7 {
+                            result = "プラスが勝ちそう！"
+                        } else if count <= -10 {
+                            result = "マイナスの勝ち！"
+                        } else if count <= -7 {
+                            result = "マイナスが勝ちそう！"
+                        } else {
+                            result = ""
+                        }
+                     */
                 },label: {
                     Image(systemName: "plus")
                 })
